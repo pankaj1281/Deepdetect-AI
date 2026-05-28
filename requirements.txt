@@ -1,0 +1,3 @@
+# Root dependency entrypoint.
+# Installs backend dependencies from the backend module.
+-r backend/requirements.txt

@@ -101,8 +101,11 @@ cd backend
 python -m venv .venv
 source .venv/bin/activate          # Windows: .venv\Scripts\activate
 
-# Install dependencies
+# Install dependencies (run inside backend/)
 pip install -r requirements.txt
+
+# OR from repo root (avoids "requirements.txt not found")
+# pip install -r requirements.txt
 
 # (Optional) configure environment
 cp ../.env.example .env
@@ -113,6 +116,15 @@ uvicorn backend.main:app --reload --host 0.0.0.0 --port 8000
 ```
 
 API docs available at **http://localhost:8000/docs**
+
+### File Access Shortcuts
+
+Use these paths directly from the repository root:
+
+- `requirements.txt` → root dependency entrypoint (includes `backend/requirements.txt`)
+- `backend/requirements.txt` → backend Python dependencies
+- `frontend/package.json` → frontend dependencies and scripts
+- `extension/manifest.json` → browser extension entrypoint
 
 ---
 
